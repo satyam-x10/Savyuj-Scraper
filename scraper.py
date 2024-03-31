@@ -53,7 +53,7 @@ def get_college_page(relative_url):
             anchor_tags = college_with_link.find_all('a')
             # print(f"Found {len(anchor_tags)} college.")
 
-            if anchor_tags and count<5:
+            if anchor_tags:
               college_data['Sno'] = count
               count+=1
               college_data['url'] = page_url
