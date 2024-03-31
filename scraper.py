@@ -77,7 +77,7 @@ def scrape_states(url):
   table = soup.find('tbody')
   # Extract information from each table row (excluding header)
   for index, row in enumerate(table.find_all('tr')):
-    if index==0:  # Skip header row
+    if index==0 or index>2:  # Skip header row
       continue
     print (index,'/',len(table.find_all('tr')))
     data = {}
